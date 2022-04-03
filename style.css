@@ -1,0 +1,165 @@
+/* Google fonts */
+
+/* 1. Roboto  -> font-family: 'Roboto', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+/* 2. Poppins -> font-family: 'Poppins', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* 3. Montserrat -> font-family: 'Montserrat', sans-serif; */
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --heading-font: "Montserrat", sans-serif;
+  --para-font: "Robot", sans-serif;
+  --secondary-font: "Poppins", sans-serif;
+}
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--secondary-font);
+  height: 100vh;
+  background-image: linear-gradient(
+    to right bottom,
+    #ff0072,
+    #ff0082,
+    #ff0094,
+    #ff00a6,
+    #ff00b9,
+    #ff00c5,
+    #fe00d1,
+    #fc00de,
+    #f900e6,
+    #f600ee,
+    #f204f6,
+    #ed0cfe
+  );
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+}
+
+.sec-1 {
+  flex: 0 0 45%;
+  margin: 30px 0px;
+}
+
+.sec-1 .content {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: 50px;
+}
+
+.sec-1 .content p:first-child {
+  font-size: 3.5rem;
+  color: black;
+  background-color: white;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.sec-1 .content h1 {
+  font-size: 5rem;
+  font-weight: 300;
+  font-family: var(--secondary-font);
+}
+
+.sec-1 .content h1 .bold {
+  font-weight: 500;
+}
+
+.sec-1 .content P:last-child {
+  padding-right: 30px;
+  font-size: calc(1rem + 2vw);
+  text-transform: uppercase;
+}
+
+.sec-2 {
+  position: relative;
+}
+
+.img-wrapper {
+  overflow: hidden;
+}
+
+.sec-2 .img-wrapper {
+  position: relative;
+  border: 0px solid #333;
+  width: 350px;
+  height: 650px;
+  background-color: red;
+  border: 8px solid #2f3640e6;
+  border-bottom: none;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.sec-2 .img-wrapper:nth-child(2) {
+  background-color: green;
+  height: 550px;
+  position: relative;
+  left: -10%;
+  z-index: -1;
+}
+
+.sec-2 .img-wrapper img {
+  border-radius: 10px;
+}
+
+@media only screen and (max-width: 1271px) {
+  .sec-1 .content {
+    margin: 0;
+  }
+  .sec-2 .img-wrapper:nth-child(2) {
+    left: 10px;
+  }
+}
+
+/* Sidebar */
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  max-width: 320px;
+  transform: translateX(-100%);
+  transition: transform 0.3s;
+  z-index: 10;
+}
+
+.expand {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  padding: 5px 11px;
+  font-size: 2rem;
+
+  color: whitesmoke;
+  background-color: #2f3640;
+  transform: translateX(50px);
+  z-index: 10;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+}
+
+.toggle {
+  transform: translateX(0%);
+}
